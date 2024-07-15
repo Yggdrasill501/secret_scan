@@ -18,14 +18,14 @@ type Parameter struct {
 }
 
 func main() {
-    jenkinsURL := "http://your-jenkins-url/job/your-job-name/build"
+    jenkinsURL := "http://your-jenkins-url/job/your-job-name/build" // replace with url to jenkins workflow
     username := os.Getenv("JENKINS_USER")
     apiToken := os.Getenv("JENKINS_API_TOKEN")
 
     buildRequest := BuildRequest{
         Parameter: []Parameter{
-            {Name: "BITBUCKET_REPO", Value: "your-bitbucket-repo-url"},
-            {Name: "BITBUCKET_CREDENTIALS_ID", Value: "your-credentials-id"},
+            {Name: "BITBUCKET_REPO", Value: "repo-url"}, //repository url
+            {Name: "BITBUCKET_CREDENTIALS_ID", Value: "credentials-id"}, // replace with crendetials
         },
     }
 
